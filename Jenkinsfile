@@ -4,7 +4,10 @@ pipeline {
     stages {
        stage('Docker build') {
             steps {
-                sh 'docker build -t node-backend .'
+                sh '''
+                docker version
+                docker build -t node-backend .
+                '''
             }
         }
     }
